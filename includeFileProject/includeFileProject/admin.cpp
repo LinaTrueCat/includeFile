@@ -16,3 +16,9 @@ void Admin::showStatus()
 {
     std::cout << "Admin name: " << name << ", Password: " << password << std::endl;
 }
+
+std::ostream& operator<<(std::ostream& out, const Admin& admin)
+{
+    out << "Admin (password: " << admin.password << " name: " << admin.name << ")" << "\n";
+    return out;
+}

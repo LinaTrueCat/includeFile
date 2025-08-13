@@ -11,6 +11,9 @@ public:
     Admin(std::string m_password, std::string m_name); // конструктор
     ~Admin();                                           // деструктор
     void showStatus();                                  // метод
+
+    friend std::ostream& operator<<(std::ostream& out, const Admin& admin);
+
 };
 
 #endif

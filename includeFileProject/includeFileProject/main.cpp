@@ -25,7 +25,7 @@ int main()
 
     ofstream file("passwords.txt", ios_base::out);
     if (file.is_open()) {
-        file << Admin.a;
+        file << a;
     }
 
     return 0;
