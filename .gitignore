@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/includeFileProject/.vs
+/includeFileProject/includeFileProject/x64
+/includeFileProject/x64
