@@ -2,16 +2,25 @@
 #define DOCTOR_CLASS
 
 #include <string>
+#include <vector>
 
 class DoctorClass {
-public:
+private:
     std::string surname;
 
-    DoctorClass() = default;                    // конструктор за замовчуванням
-    DoctorClass(std::string s) : surname(s) {}  // конструктор з параметром
+    // статичний список лікарів
+    static std::vector<DoctorClass> doctorsList;
 
-    void showDoctorsSurname();
+public:
+    DoctorClass() = default;
+    DoctorClass(std::string s) : surname(s) {}
+
+    void showDoctorsSurname() const;
     void addDoctorsSurname();
+
+    // нові методи:
+    static void addDoctor();        // додає нового лікаря у список
+    static void showAllDoctors();   // показує всіх лікарів
 };
 
 #endif
